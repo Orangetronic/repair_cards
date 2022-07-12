@@ -10,30 +10,51 @@
   
   /* color: var(--col-2); */
   background: var(--col-1);
+  scroll-behavior: auto;
+  -webkit-scroll-behavior: auto;
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
 }
 
 * {
   line-height: 1.6em;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
 body {
   padding: 1em;
 }
 
+header.main {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--col-1);
+  margin-top: -1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
 
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .card {
   /* position: absolute; */
   margin: 1rem;
-  float: left;
   width: 270px;
   height: 450px;
   perspective: 500px;
+}
+
+@media screen and (max-width: 750px) {
+  .card {
+    perspective: 1200px;
+    width: 90vw;
+    height: calc(1.666 * 90vw);
+  }
 }
 
 .content {

@@ -378,17 +378,19 @@ function clearDeck() {
 }
 
 function revealThree () {
-  
   let flippable = cards.filter(card => !card.classList.contains("flipped"))
   if (flippable.length <=3) {
     revealAll()
   } else {
+    let first
     let count = 0
     while (count < 3) {
       const toFlip = flippable[Math.floor(Math.random() * flippable.length)]
       toFlip.classList.add("flipped")
+      if (!first) first = toFlip
       count++
     }
+    first.scrollIntoViewIfNeeded()
   }
 }
 
