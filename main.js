@@ -69,67 +69,67 @@ const cardDefinitions = [
   {
     "value": "Ace",
     "suit": "Clubs",
-    "content": "No Updates"
+    "content": "Nø Updates"
   },
   {
     "value": "2",
     "suit": "Clubs",
-    "content": "No Safety "
+    "content": "Nø Safety "
   },
   {
     "value": "3",
     "suit": "Clubs",
-    "content": "No Repairer  "
+    "content": "Nø Repairer  "
   },
   {
     "value": "4",
     "suit": "Clubs",
-    "content": "No Rights to Repair"
+    "content": "Nø Rights to Repair"
   },
   {
     "value": "5",
     "suit": "Clubs",
-    "content": "No Choice "
+    "content": "Nø Choice "
   },
   {
     "value": "6",
     "suit": "Clubs",
-    "content": "No Information"
+    "content": "Nø Information"
   },
   {
     "value": "7",
     "suit": "Clubs",
-    "content": "No Access"
+    "content": "Nø Access"
   },
   {
     "value": "8",
     "suit": "Clubs",
-    "content": "No Training"
+    "content": "Nø Training"
   },
   {
     "value": "9",
     "suit": "Clubs",
-    "content": "No Money"
+    "content": "Nø Money"
   },
   {
     "value": "10",
     "suit": "Clubs",
-    "content": "No Confidence "
+    "content": "Nø Confidence "
   },
   {
     "value": "Jack",
     "suit": "Clubs",
-    "content": "No Incentive "
+    "content": "Nø Incentive "
   },
   {
     "value": "Queen ",
     "suit": "Clubs",
-    "content": "No Time"
+    "content": "Nø Time"
   },
   {
     "value": "King",
     "suit": "Clubs",
-    "content": "No Desire"
+    "content": "Nø Desire"
   },
   {
     "value": "Ace",

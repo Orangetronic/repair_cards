@@ -5,7 +5,7 @@
   --col-1: white;
   --col-2: black;
   --col-3: red;
-  --col-4: cyan;
+  --col-4: royalblue;
   --col-5: yellow;
   
   /* color: var(--col-2); */
@@ -106,9 +106,31 @@ body {
   float: right;  
 }
 
-button {
+button, a.nav-link {
+  display: inline-block;
   background: white;
+  font-size: 0.6rem;
   padding: 0.5em;
+  border: 1px solid black;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+a.nav-link {
+  color:inherit;
+}
+
+a.nav-link:hover,
+button:hover {
+  background: var(--col-4);
+  color: var(--col-1);
+}
+
+ul.credits {
+  list-style: none;
+  column-width: 20ch;
+  column-count: auto;
+  padding: 1rem;
 }
 
 .clearfix::after {
