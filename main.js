@@ -57,7 +57,7 @@ const cardDefinitions = [
     "content": "It Was Nana's"
   },
   {
-    "value": "Queen ",
+    "value": "Queen",
     "suit": "Hearts",
     "content": "Why Not?"
   },
@@ -122,7 +122,7 @@ const cardDefinitions = [
     "content": "Nø Incentive "
   },
   {
-    "value": "Queen ",
+    "value": "Queen",
     "suit": "Clubs",
     "content": "Nø Time"
   },
@@ -144,7 +144,7 @@ const cardDefinitions = [
   {
     "value": "3",
     "suit": "Spades",
-    "content": "Use String "
+    "content": "Use String"
   },
   {
     "value": "4",
@@ -154,7 +154,7 @@ const cardDefinitions = [
   {
     "value": "5",
     "suit": "Spades",
-    "content": "Collaborate "
+    "content": "Collaborate"
   },
   {
     "value": "6",
@@ -184,10 +184,10 @@ const cardDefinitions = [
   {
     "value": "Jack",
     "suit": "Spades",
-    "content": "Maintain "
+    "content": "Maintain"
   },
   {
-    "value": "Queen ",
+    "value": "Queen",
     "suit": "Spades",
     "content": "Necessity"
   },
@@ -195,6 +195,96 @@ const cardDefinitions = [
     "value": "King",
     "suit": "Spades",
     "content": "Control"
+  },
+  {
+    "value": "Ace",
+    "suit": "Diamonds",
+    "image": true,
+    "content": "Broken TVs in a pile"
+  },
+  {
+    "value": "2",
+    "suit": "Diamonds",
+    "image": true,
+    "content": "PC tower converted into a coffee maker"
+  },
+  {
+    "value": "3",
+    "suit": "Diamonds",
+    "image": true,
+    "content": "Mac tower used as a mailbox"
+  },
+  {
+    "value": "4",
+    "suit": "Diamonds",
+    "image": true,
+    "content": "CD case used to keep a bagel sandwich fresh"
+  },
+  {
+    "value": "5",
+    "suit": "Diamonds",
+    "image": true,
+    "content": "Computer monitor converted into a cat bed"
+  },
+  {
+    "value": "6",
+    "suit": "Diamonds",
+    "image": true,
+    "content": "VCR converted into a toaster"
+  },
+  {
+    "value": "7",
+    "suit": "Diamonds",
+    "image": true,
+    "content": "A glass mug with half drunk tea sits on a floppy disk used as a coaster. A stack of floppy disk coasters sits next to the mug"
+  },
+  {
+    "value": "8",
+    "suit": "Diamonds",
+    "image": true,
+    "content": "A hand holds a barbell made from CDs"
+  },
+  {
+    "value": "9",
+    "suit": "Diamonds",
+    "image": true,
+    "content": "Two mac towers converted into a bench"
+  },
+  {
+    "value": "10",
+    "suit": "Diamonds",
+    "image": true,
+    "content": "A telephone booth without a telephone and in its place is a small tree."
+  },
+  {
+    "value": "Jack",
+    "suit": "Diamonds",
+    "image": true,
+    "content": "A motherboard sits in a firepit with flames spraying out below it"
+  },
+  {
+    "value": "Queen",
+    "suit": "Diamonds",
+    "image": true,
+    "content": "A very long cat cable on fire"
+  },
+  {
+    "value": "King",
+    "suit": "Diamonds",
+    "image": true,
+    "content": "A laptop sits in intense flames, its screen melted off and steam coming from the keyboard"
+  },
+  {
+    "value": "J1",
+    "suit": "Joker",
+    "image": true,
+    "content": "Stained glass window by contemporary artist repairing windows destroyed in in WWII in the Cathedral of Saint Cyr-Sainte Julitte"
+  },
+  {
+    "value": "J2",
+    "suit": "Joker",
+    "image": true,
+    "content": "Stained glass window by contemporary artist repairing windows destroyed in in WWII in the Cathedral of Saint Cyr-Sainte Julitte"
   }
 ]
 
@@ -207,14 +297,21 @@ cardDefinitions.forEach(function (cardDefinition, index) {
       <div class="front">
         <!-- Content here is displayed using the background image -->
       </div>
-      <div class="back" style="background: 
-        
+      <div class="back" style="background-image: 
+        url(/backgrounds/RA_logo.png),
         url(/backgrounds/cropped_${index}.jpg);
         ">
-        <h2>${cardDefinition.content}</h2>
-      
+        ${
+          cardDefinition.image
+          ? `<img src="/${cardDefinition.suit}/${cardDefinition.value}.svg" alt="${cardDefinition.content}" />`
+          : `<h2>${cardDefinition.content}</h2>`
+        }
         <legend>
-          ${cardDefinition.value} of ${cardDefinition.suit}
+          ${
+            cardDefinition.suit !== "Joker"
+              ? `${cardDefinition.value} of ${cardDefinition.suit}`
+              : "Joker"
+          }
         </legend>
       </div>
     </div>

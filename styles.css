@@ -78,9 +78,22 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  background-size:
+    100px,
+    cover;
+  background-position:
+    bottom left,
+    center;
+  background-repeat: no-repeat;
 }
 
 .back h2 {
+  margin-top: auto;
+  margin-bottom: auto;
+  background: var(--col-1);
+}
+
+.back img {
   margin-top: auto;
   margin-bottom: auto;
   background: var(--col-1);
