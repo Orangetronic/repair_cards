@@ -108,6 +108,14 @@ header.main {
   background-repeat: no-repeat;
 }
 
+.image-card-heading {
+  font-size: 0.6rem;
+  text-align: left;
+  padding: 0.5em;
+  font-weight: light;
+  
+}
+
 .back h2 {
   margin-top: auto;
   margin-bottom: auto;
@@ -116,8 +124,11 @@ header.main {
 
 .back img {
   margin-top: auto;
-  margin-bottom: auto;
   background: var(--col-1);
+}
+
+.back img + h2 {
+  margin-top: 0;
 }
 
 .back legend {

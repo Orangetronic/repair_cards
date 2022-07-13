@@ -292,6 +292,7 @@ const cardsContainer = document.getElementById("cards-container")
 
 cardDefinitions.forEach(function (cardDefinition, index) {
   const card = document.createElement('div') 
+  const id = `${cardDefinition.value}-of-${cardDefinition.suit}`
   card.innerHTML = `
     <div class="content">
       <div class="front">
@@ -303,8 +304,13 @@ cardDefinitions.forEach(function (cardDefinition, index) {
         ">
         ${
           cardDefinition.image
-          ? `<img src="/${cardDefinition.suit}/${cardDefinition.value}.svg" alt="${cardDefinition.content}" />`
-          : `<h2>${cardDefinition.content}</h2>`
+          ? `
+              <img src="/${cardDefinition.suit}/${cardDefinition.value}.svg" alt="" aria-describedby="${id}" />
+              <h2 class="image-card-heading" id="${id}">${cardDefinition.content}</h2>
+            `
+          : `
+              <h2>${cardDefinition.content}</h2>
+            `
         }
         <legend>
           ${
